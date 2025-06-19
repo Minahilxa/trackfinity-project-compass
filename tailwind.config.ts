@@ -26,20 +26,20 @@ export default {
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
 				primary: {
-					DEFAULT: '#0052CC',
+					DEFAULT: '#7ED957',
 					foreground: '#FFFFFF'
 				},
 				secondary: {
-					DEFAULT: '#FFB300',
-					foreground: '#000000'
-				},
-				accent: {
-					DEFAULT: '#2E3A59',
+					DEFAULT: '#1C6758',
 					foreground: '#FFFFFF'
 				},
+				accent: {
+					DEFAULT: '#F7FFF1',
+					foreground: '#2C3333'
+				},
 				muted: {
-					DEFAULT: '#F4F6FA',
-					foreground: '#2E3A59'
+					DEFAULT: '#F7FFF1',
+					foreground: '#2C3333'
 				},
 				destructive: {
 					DEFAULT: 'hsl(var(--destructive))',
@@ -66,6 +66,7 @@ export default {
 			},
 			fontFamily: {
 				'inter': ['Inter', 'sans-serif'],
+				'poppins': ['Poppins', 'sans-serif'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

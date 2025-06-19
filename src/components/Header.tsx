@@ -25,10 +25,10 @@ const Header = () => {
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
             <Link to="/" className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
+              <div className="w-8 h-8 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-lg">T</span>
               </div>
-              <span className="text-xl font-bold text-gray-900">Trackfinity</span>
+              <span className="text-xl font-bold text-gray-900 font-poppins">Trackfinity</span>
             </Link>
           </div>
 
@@ -38,7 +38,7 @@ const Header = () => {
               <Link
                 key={item.name}
                 to={item.href}
-                className={`text-sm font-medium transition-colors hover:text-primary ${
+                className={`text-sm font-medium transition-colors hover:text-primary font-inter ${
                   isActiveRoute(item.href) ? 'text-primary' : 'text-gray-600'
                 }`}
               >
@@ -49,11 +49,11 @@ const Header = () => {
 
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center space-x-4">
-            <Button variant="outline" size="sm">
+            <Button variant="outline" size="sm" className="border-primary text-primary hover:bg-primary hover:text-white">
               Sign In
             </Button>
-            <Button size="sm" className="bg-primary hover:bg-primary/90">
-              Get Started Free
+            <Button size="sm" className="bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 text-white">
+              Start Free
             </Button>
           </div>
 
@@ -77,7 +77,7 @@ const Header = () => {
                 <Link
                   key={item.name}
                   to={item.href}
-                  className={`block px-3 py-2 text-base font-medium transition-colors hover:text-primary ${
+                  className={`block px-3 py-2 text-base font-medium transition-colors hover:text-primary font-inter ${
                     isActiveRoute(item.href) ? 'text-primary' : 'text-gray-600'
                   }`}
                   onClick={() => setIsMenuOpen(false)}
@@ -86,11 +86,11 @@ const Header = () => {
                 </Link>
               ))}
               <div className="px-3 py-2 space-y-2">
-                <Button variant="outline" size="sm" className="w-full">
+                <Button variant="outline" size="sm" className="w-full border-primary text-primary hover:bg-primary hover:text-white">
                   Sign In
                 </Button>
-                <Button size="sm" className="w-full bg-primary hover:bg-primary/90">
-                  Get Started Free
+                <Button size="sm" className="w-full bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 text-white">
+                  Start Free
                 </Button>
               </div>
             </div>
