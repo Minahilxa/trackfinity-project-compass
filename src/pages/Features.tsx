@@ -9,6 +9,7 @@ const Features = () => {
     {
       title: "Time-Tracking, Simplified",
       icon: <Clock className="h-12 w-12 text-primary" />,
+      image: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=600&h=300&fit=crop",
       features: [
         { icon: <Clock className="h-6 w-6" />, title: "Automated Timesheets", description: "Smart time tracking with automatic project detection" },
         { icon: <FileText className="h-6 w-6" />, title: "Approval Flows", description: "Streamlined approval processes for time entries" },
@@ -18,6 +19,7 @@ const Features = () => {
     {
       title: "Enterprise Collaboration",
       icon: <Users className="h-12 w-12 text-primary" />,
+      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&h=300&fit=crop",
       features: [
         { icon: <Users className="h-6 w-6" />, title: "Task Boards & Chat", description: "Collaborative workspaces with integrated communication" },
         { icon: <Shield className="h-6 w-6" />, title: "Role-Based Access", description: "Granular permissions and security controls" },
@@ -27,6 +29,7 @@ const Features = () => {
     {
       title: "Public-Sector Compliance",
       icon: <Shield className="h-12 w-12 text-primary" />,
+      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=600&h=300&fit=crop",
       features: [
         { icon: <FileText className="h-6 w-6" />, title: "Project Lifecycle Templates", description: "Pre-built templates for government projects" },
         { icon: <Shield className="h-6 w-6" />, title: "Audit Logs", description: "Complete audit trail for compliance requirements" },
@@ -36,6 +39,7 @@ const Features = () => {
     {
       title: "Construction & Infrastructure",
       icon: <Building className="h-12 w-12 text-primary" />,
+      image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=600&h=300&fit=crop",
       features: [
         { icon: <Calendar className="h-6 w-6" />, title: "Gantt Charts with Dependencies", description: "Visual project timelines with task dependencies" },
         { icon: <Users className="h-6 w-6" />, title: "Contractor Scheduling", description: "Manage subcontractors and resource allocation" },
@@ -45,6 +49,7 @@ const Features = () => {
     {
       title: "Analytics Dashboard",
       icon: <BarChart3 className="h-12 w-12 text-primary" />,
+      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=600&h=300&fit=crop",
       features: [
         { icon: <BarChart3 className="h-6 w-6" />, title: "Custom Views by User Roles", description: "Personalized dashboards for different team members" },
         { icon: <Download className="h-6 w-6" />, title: "PDF/CSV Exports", description: "Export reports in multiple formats" },
@@ -78,6 +83,14 @@ const Features = () => {
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 {category.title}
               </h2>
+              {/* Feature Category Image */}
+              <div className="max-w-2xl mx-auto mb-8">
+                <img 
+                  src={category.image} 
+                  alt={`${category.title} illustration`}
+                  className="w-full h-48 object-cover rounded-lg shadow-lg"
+                />
+              </div>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

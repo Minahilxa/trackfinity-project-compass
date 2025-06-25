@@ -3,7 +3,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { Clock, Users, Shield, Building, BarChart3, CheckCircle, Zap, Target, Globe } from 'lucide-react';
+import { Clock, Users, Shield, Building, BarChart3, CheckCircle, Zap, Target, Globe, Play } from 'lucide-react';
 
 const Index = () => {
   const features = [
@@ -30,10 +30,30 @@ const Index = () => {
   ];
 
   const sectors = [
-    { icon: <Shield className="h-12 w-12 text-secondary" />, title: "Government", desc: "Compliance & workflows" },
-    { icon: <Building className="h-12 w-12 text-secondary" />, title: "Infrastructure", desc: "Timeline & cost tools" },
-    { icon: <Zap className="h-12 w-12 text-secondary" />, title: "Engineering", desc: "File management & CAD" },
-    { icon: <Target className="h-12 w-12 text-secondary" />, title: "Agencies", desc: "Project automation" }
+    { 
+      icon: <Shield className="h-12 w-12 text-secondary" />, 
+      title: "Government", 
+      desc: "Compliance & workflows",
+      image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=400&h=250&fit=crop"
+    },
+    { 
+      icon: <Building className="h-12 w-12 text-secondary" />, 
+      title: "Infrastructure", 
+      desc: "Timeline & cost tools",
+      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=250&fit=crop"
+    },
+    { 
+      icon: <Zap className="h-12 w-12 text-secondary" />, 
+      title: "Engineering", 
+      desc: "File management & CAD",
+      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=250&fit=crop"
+    },
+    { 
+      icon: <Target className="h-12 w-12 text-secondary" />, 
+      title: "Agencies", 
+      desc: "Project automation",
+      image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=400&h=250&fit=crop"
+    }
   ];
 
   const testimonials = [
@@ -65,15 +85,23 @@ const Index = () => {
             </Button>
           </div>
           
-          {/* Dashboard Preview */}
+          {/* Dashboard Preview with Sample Video */}
           <div className="mt-16">
             <div className="bg-white rounded-2xl shadow-2xl p-8 max-w-5xl mx-auto border border-primary/10">
-              <div className="bg-gradient-to-br from-accent to-primary/5 rounded-xl h-96 flex items-center justify-center relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-secondary/10"></div>
-                <div className="text-center z-10">
-                  <BarChart3 className="h-24 w-24 text-primary mx-auto mb-4" />
-                  <p className="text-gray-700 text-lg font-poppins font-semibold">Interactive Dashboard Preview</p>
-                  <p className="text-gray-500 font-inter">Real-time analytics, task boards, and collaboration tools</p>
+              <div className="relative rounded-xl overflow-hidden bg-gradient-to-br from-accent to-primary/5">
+                <img 
+                  src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=450&fit=crop" 
+                  alt="Dashboard Preview - Trackfinity Interface" 
+                  className="w-full h-96 object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
+                  <div className="text-center z-10">
+                    <div className="bg-white/90 backdrop-blur-sm rounded-full w-16 h-16 flex items-center justify-center mb-4 mx-auto hover:bg-white transition-colors cursor-pointer">
+                      <Play className="h-8 w-8 text-primary ml-1" />
+                    </div>
+                    <p className="text-white text-lg font-poppins font-semibold drop-shadow-lg">Watch Demo</p>
+                    <p className="text-white/90 font-inter drop-shadow">See Trackfinity in action</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -107,7 +135,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Built For Section */}
+      {/* Built For Section with Images */}
       <section className="py-20 bg-accent">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -117,8 +145,15 @@ const Index = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {sectors.map((sector, index) => (
-              <Card key={index} className="text-center hover:shadow-lg transition-all duration-300 bg-white">
-                <CardContent className="p-8">
+              <Card key={index} className="text-center hover:shadow-lg transition-all duration-300 bg-white overflow-hidden">
+                <div className="h-32 overflow-hidden">
+                  <img 
+                    src={sector.image} 
+                    alt={`${sector.title} sector`}
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <CardContent className="p-6">
                   <div className="mb-4 flex justify-center">{sector.icon}</div>
                   <h3 className="text-xl font-semibold mb-2 font-poppins">{sector.title}</h3>
                   <p className="text-gray-600 font-inter">{sector.desc}</p>

@@ -11,6 +11,7 @@ const Solutions = () => {
       icon: <Building2 className="h-16 w-16 text-primary" />,
       title: "Government Agencies",
       description: "Streamline public sector project management with compliance-first features, audit trails, and lifecycle templates designed for government initiatives.",
+      image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?w=500&h=300&fit=crop",
       features: [
         "Compliance & audit logs",
         "Public sector templates",
@@ -23,6 +24,7 @@ const Solutions = () => {
       icon: <HardHat className="h-16 w-16 text-primary" />,
       title: "Construction Companies",
       description: "Manage complex construction projects with Gantt charts, contractor scheduling, and material tracking from groundbreaking to completion.",
+      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=500&h=300&fit=crop",
       features: [
         "Gantt charts & dependencies",
         "Contractor management",
@@ -35,6 +37,7 @@ const Solutions = () => {
       icon: <Zap className="h-16 w-16 text-primary" />,
       title: "Engineering Firms",
       description: "Coordinate technical projects with precision using advanced project planning, resource allocation, and engineering-specific workflows.",
+      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=500&h=300&fit=crop",
       features: [
         "Technical documentation",
         "Resource optimization",
@@ -47,6 +50,7 @@ const Solutions = () => {
       icon: <Users className="h-16 w-16 text-primary" />,
       title: "Tech & Software Teams",
       description: "Accelerate software development with agile project management, sprint planning, and real-time collaboration tools built for modern tech teams.",
+      image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=500&h=300&fit=crop",
       features: [
         "Agile & sprint planning",
         "Code integration",
@@ -59,6 +63,7 @@ const Solutions = () => {
       icon: <GraduationCap className="h-16 w-16 text-primary" />,
       title: "Educational Institutions",
       description: "Manage academic projects, research initiatives, and institutional operations with tools designed for educational environments.",
+      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=500&h=300&fit=crop",
       features: [
         "Academic project templates",
         "Research management",
@@ -90,7 +95,14 @@ const Solutions = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {solutions.map((solution, index) => (
-              <Card key={index} className="hover:shadow-lg transition-shadow bg-white">
+              <Card key={index} className="hover:shadow-lg transition-shadow bg-white overflow-hidden">
+                <div className="h-48 overflow-hidden">
+                  <img 
+                    src={solution.image} 
+                    alt={`${solution.title} solution preview`}
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
                 <CardContent className="p-8">
                   <div className="mb-6">{solution.icon}</div>
                   <h3 className="text-2xl font-bold mb-4 text-gray-900">{solution.title}</h3>
